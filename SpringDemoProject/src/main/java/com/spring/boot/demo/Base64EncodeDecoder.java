@@ -1,0 +1,22 @@
+package com.spring.boot.demo;
+
+import java.util.Base64;
+
+public class Base64EncodeDecoder {
+
+	public static String decodeBase64(String eStr) {
+
+		// Getting MIME decoder
+		Base64.Decoder decoder = Base64.getMimeDecoder();
+		// Decoding MIME encoded message
+		String dStr = new String(decoder.decode(eStr));
+		System.out.println("Decoded message: " + dStr);
+		return dStr;
+	}
+
+	public static void main(String[] args) {
+		String inp = "eyJtc2dJbmZvIjp7Im1zZ0lEIjoiUTQyMjgwNTU0MjAyMzEwMDMwNDQyNTkwNDQyNTkiLCJtc2dUeXBlIjoiTVNHX1JFU1VMVF9JTlFVSVJZIiwidGltZVN0YW1wIjoiMjAyMzEwMDMwNDQyNTkiLCJ2ZXJzaW9uTm8iOiIxLjAuMCIsImFjcXVpcmVySUlOIjoiNDIyODA1NTQifSwidHJ4SW5mbyI6eyJvcmlnaW5hbE1zZ0lEIjoiWjQyMjgwNTU0MjAyMzEwMDMxMjQwMzM5NjU0NzIiLCJhZGRpdGlvbmFsUHJvcGVydGllcyI6e319LCJtc2dSZXNwb25zZSI6eyJyZXNwb25zZUNvZGUiOiJBMCIsInJlc3BvbnNlTXNnIjoiW0EwXSBTaWduYXR1cmUgdmVyaWZpY2F0aW9uIGZhaWxzLiJ9LCJjZXJ0aWZpY2F0ZVNpZ25hdHVyZSI6eyJzaWduYXR1cmUiOiJOYjNvcVRNQ0tqNWNsb1kzOFo3Qmx0bklCemhFeGZGbEh2Y25YdXRnV2c3NzV5bnYwaU1scitmMmRxbnVYLzlERXJlMHZlenZHYzJIeDJnVm9HL0plNjRYQlpQUVZHWTJFNzdpWWVEMmJNdlFrM2ZMS216U3lxemlBOTJNQ2lvMTdTaUwwR3VyT1hxRWYrZ0hOY0JqeEZZYzhIbk9sTTRxVWxHMFFKWS9zZmZ0R0d0OER5QVRwczBHM29CaTFTQ0lCaVhudjlMQmV5bGtKdXVjY3NDUVh2b0tRYlplQVNJT2c2T0tTUGNQVWdMWjF1MHFMU212bi9kNktTVWpBNm5zcGZXR3BtTG1NbEZrWlRnU0N0YUY3b2V2VjNNNnpqUkRFZUFPNnhvOUgwNmlXQnBIMDY4dkJ2TXZxRll1bWMvaUcvWGkvOCtBNHZXU2FhSHA5bHdWd3dcdTAwM2RcdTAwM2QiLCJ1YWlzU2lnbkNlcnRJRCI6IjE4MDMyNzE4MzMxMyIsImFjcXVpcmVyRW5jQ2VydElEIjoiMjEwMjA0MTAxMzI2IiwiYWRkaXRpb25hbFByb3BlcnRpZXMiOnt9fSwiYWRkaXRpb25hbFByb3BlcnRpZXMiOnt9fQ==";
+		Base64EncodeDecoder.decodeBase64(inp);
+	}
+
+}
