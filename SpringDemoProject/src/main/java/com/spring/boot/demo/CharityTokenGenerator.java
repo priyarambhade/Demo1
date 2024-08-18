@@ -12,8 +12,8 @@ public class CharityTokenGenerator {
 	}
 
 	public static void main(String[] args) {
-		String clientID = "d2de370dd90df0af";
-		String clientSecrete = "fd2b88fe984bd2dd0ccd6f3f";
+		String clientID = "2e57ead8060bfc52";
+		String clientSecrete = "15f5223fd652f33c26fd127f";
 		System.out.println(getBasicToken(clientID, clientSecrete));
 	}
 }

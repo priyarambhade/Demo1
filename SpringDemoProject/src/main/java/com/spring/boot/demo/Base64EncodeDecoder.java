@@ -1,5 +1,6 @@
 package com.spring.boot.demo;
 
+import java.io.UnsupportedEncodingException;
 import java.util.Base64;
 
 public class Base64EncodeDecoder {
@@ -14,9 +15,15 @@ public class Base64EncodeDecoder {
 		return dStr;
 	}
 
-	public static void main(String[] args) {
-		String inp = "eyJtc2dJbmZvIjp7Im1zZ0lEIjoiUTQyMjgwNTU0MjAyMzEwMDMwNDQyNTkwNDQyNTkiLCJtc2dUeXBlIjoiTVNHX1JFU1VMVF9JTlFVSVJZIiwidGltZVN0YW1wIjoiMjAyMzEwMDMwNDQyNTkiLCJ2ZXJzaW9uTm8iOiIxLjAuMCIsImFjcXVpcmVySUlOIjoiNDIyODA1NTQifSwidHJ4SW5mbyI6eyJvcmlnaW5hbE1zZ0lEIjoiWjQyMjgwNTU0MjAyMzEwMDMxMjQwMzM5NjU0NzIiLCJhZGRpdGlvbmFsUHJvcGVydGllcyI6e319LCJtc2dSZXNwb25zZSI6eyJyZXNwb25zZUNvZGUiOiJBMCIsInJlc3BvbnNlTXNnIjoiW0EwXSBTaWduYXR1cmUgdmVyaWZpY2F0aW9uIGZhaWxzLiJ9LCJjZXJ0aWZpY2F0ZVNpZ25hdHVyZSI6eyJzaWduYXR1cmUiOiJOYjNvcVRNQ0tqNWNsb1kzOFo3Qmx0bklCemhFeGZGbEh2Y25YdXRnV2c3NzV5bnYwaU1scitmMmRxbnVYLzlERXJlMHZlenZHYzJIeDJnVm9HL0plNjRYQlpQUVZHWTJFNzdpWWVEMmJNdlFrM2ZMS216U3lxemlBOTJNQ2lvMTdTaUwwR3VyT1hxRWYrZ0hOY0JqeEZZYzhIbk9sTTRxVWxHMFFKWS9zZmZ0R0d0OER5QVRwczBHM29CaTFTQ0lCaVhudjlMQmV5bGtKdXVjY3NDUVh2b0tRYlplQVNJT2c2T0tTUGNQVWdMWjF1MHFMU212bi9kNktTVWpBNm5zcGZXR3BtTG1NbEZrWlRnU0N0YUY3b2V2VjNNNnpqUkRFZUFPNnhvOUgwNmlXQnBIMDY4dkJ2TXZxRll1bWMvaUcvWGkvOCtBNHZXU2FhSHA5bHdWd3dcdTAwM2RcdTAwM2QiLCJ1YWlzU2lnbkNlcnRJRCI6IjE4MDMyNzE4MzMxMyIsImFjcXVpcmVyRW5jQ2VydElEIjoiMjEwMjA0MTAxMzI2IiwiYWRkaXRpb25hbFByb3BlcnRpZXMiOnt9fSwiYWRkaXRpb25hbFByb3BlcnRpZXMiOnt9fQ==";
+	public static void main(String[] args) throws UnsupportedEncodingException {
+		String inp = "912092XXXXXX1183";
 		Base64EncodeDecoder.decodeBase64(inp);
+		System.out.println("card number ==>"+(912092 % 1000000));
+		
+//		String s1 = "E8wSYn4RqDJmnFvjsI4C97ipTjLfCB8mOoSnHSoyprI6rDarzPCPRgTCb/XD4UdegqiXdvCROPYIXZ5R1yI/vFXXYLxzOV1x4rjG83+lvt/zJD/bQ1ka2ZcFJiQz0ee5woyEnaq6FgUUGtCP5S0FiOzuhWObBXjlkoulJUhPgo37WIxTW52Vb/IUIK1IL/WFNvie/XsrNjrsr+ZiCXGfvcdWsOMNtfuUXUU8+L0h1CMgd2Rv01Cedt/j+4XfrTF9n8vzaPlIyV3EoVnb6aFoFRZtyAbmiTaflGjPLp7Bc4C48U8LMepOyrP9+TYRU1naFxuv5aD/MRWsMnKMDq3RVQ==";
+//		byte[] bytes = s1.getBytes("UTF-8");
+//		String s2 = new String(bytes, "UTF-8");
+//		System.out.println("Data=>"+s2);
 	}
 
 }
